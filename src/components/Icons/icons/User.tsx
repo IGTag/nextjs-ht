@@ -1,4 +1,4 @@
-export const User = ({ color = "currentColor", className = "" }) => {
+export const UserIcon = ({ color = "currentColor", className = "" }) => {
   return (
     <svg
       viewBox="0 0 448 512"
