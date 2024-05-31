@@ -10,6 +10,7 @@ import { NavbarProps } from "./types";
 import { NavbarList } from "./NavbarList";
 import { NavbarListItemLink } from "./NavbarListIItemLink";
 import { NavbarListItemButton } from "./NavbarListItemButton";
+import Image from "next/image";
 
 export const Navbar = ({ className, ...props }: NavbarProps) => {
   return (
@@ -21,10 +22,12 @@ export const Navbar = ({ className, ...props }: NavbarProps) => {
       {...props}
     >
       <div className="flex items-center justify-center my-4">
-        <img
-          src="./images/mtswhite2.png"
+        <Image
+          src="/images/mtswhite2.png"
           alt="Logo MuteiTodos"
           className="w-auto h-12 p-2"
+          width={127}
+          height={32}
         />
       </div>
       <NavbarList className={`flex-grow`}>
