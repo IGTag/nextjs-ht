@@ -23,7 +23,7 @@ export const Navbar = ({ className, ...props }: NavbarProps) => {
     >
       <div className="flex items-center justify-center my-4">
         <Image
-          src="/images/mtswhite2.png"
+          src="/assets/images/mtswhite2.png"
           alt="Logo MuteiTodos"
           className="w-auto h-12 p-2"
           width={127}

@@ -1,3 +1,4 @@
+import articles from "./data/articles.json";
 export default function Home() {
   return (
     <div className="ml-72">
@@ -16,6 +17,27 @@ export default function Home() {
       <div className="container mx-auto my-6">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-8 flex flex-col gap-4">
+            {articles.map((article) => {
+              return (
+                <div
+                  key={article.title}
+                  className="flex gap-4 bg-purple-500  rounded-md"
+                >
+                  <div>
+                    <img
+                      className="w-auto h-[200px]"
+                      src="https://placehold.co/600x400"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 py-4">
+                    <h2 className="text-3xl">{article.title}</h2>
+                    <p className="flex-grow">{article.excerpt}</p>
+                    <button>Ler Mais</button>
+                  </div>
+                </div>
+              );
+            })}
             {/*Item*/}
             <div className="flex gap-4 bg-purple-500  rounded-md">
               <div>
@@ -65,7 +87,7 @@ export default function Home() {
             </div>
             {/*Item*/}
             {/*Item*/}
-            <div className="flex gap-4">
+            <div className="flex gap-4 bg-red-600 rounded-md">
               <div>
                 <img
                   className="w-auto h-[200px]"
