@@ -1,4 +1,5 @@
 import articles from "./data/articles.json";
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="ml-72">
@@ -21,13 +22,15 @@ export default function Home() {
               return (
                 <div
                   key={article.title}
-                  className="flex gap-4 bg-purple-500  rounded-md"
+                  className="flex gap-4 bg-purple-500 rounded-md"
                 >
                   <div>
-                    <img
-                      className="w-auto h-[200px]"
-                      src="https://placehold.co/600x400"
-                      alt="image"
+                    <Image
+                      className="h-full w-full object-cover transition duration-500 hover:scale-105 rounded-r-lg"
+                      src={`/public/assets/images/articles${article.image}`}
+                      alt={article.title}
+                      width={600}
+                      height={400}
                     />
                   </div>
                   <div className="flex flex-col gap-2 py-4">
